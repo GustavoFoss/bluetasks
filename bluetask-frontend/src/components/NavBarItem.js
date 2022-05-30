@@ -6,7 +6,9 @@ class NavBarItem extends Component {
         return (
             <BrowserRouter>
                 <div>
-                    <Link className = "nav-item nav-link" to = {this.props.item.href} 
+                    <Link 
+                    className = {`nav-item nav-link ${this.props.item.active ? "active" : ""}`}
+                    to = {this.props.item.href} 
                     onClick= {e => this.props.onClick(this.props.item)}> 
                     {this.props.item.name} </Link> 
                 </div>
